@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <style>
+        #logo{
+            width: 100%;
+            background-color: rgb(83, 113, 255);
+            height: 125px;
+        }
+        #logo img{
+          width: 18%;
+          margin-left: 40%;
+          margin-top: 16px;
+        }
+        #back{
+            width: 100%;
+            height: 500px;
+            background-image: url("https://img.gkbcdn.com/bn/2302/1-63db9b9f2b40c9604c6e36ae._p1_.png");
+            background-size: 100% 100%;
+            padding-top: 70px;
+            padding-bottom: 60px;
+        }
+        .signin{
+            width: 28%;
+            height: 95%;
+            background-color: white;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        .signin img{
+            width: 10%;
+        }
+        .signin h5{
+            font-size: 20px;
+            margin-left: 20px;
+            padding-top: 20px;
+        }
+        #email{
+            width: 90%;
+            margin-left: 20px;
+            height: 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        #pass{
+            width: 90%;
+            margin-left: 20px;
+            height: 40px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .forgot{
+            display: flex;
+            justify-content: space-between;
+            color: gray;
+            margin-right: 40px;
+        }
+        .forgot button{
+            border-radius: 50px;
+            height: 18px;
+            margin-top: 18px;
+            margin-left: -18px;
+            color: grey;
+            border-color: rgb(180, 165, 165);
+        }
+        #keep{
+            margin-left: 20px;
+            margin-right: -20px;
+        }
+        #enter{
+            width: 90%;
+            margin-left: 20px;
+            height: 40px;
+            margin-bottom: 20px;
+            background-color: rgb(83, 113, 255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #create{
+            width: 90%;
+            margin-left: 20px;
+            height: 40px;
+            margin-bottom: 20px;
+            background-color: lightgrey;
+            color: rgb(63, 59, 59);
+            border: none;
+            border-radius: 5px;
+        }
+        #or{
+            color:gray;
+            text-align: center;
+            margin-top: -5px;
+            
+        }
+        #google{
+            margin-left: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+     <div id="logo">
+        <img src="./Screenshot (89).png" alt="">
+     </div>
+     <div id="back">
+        <div class="signin">
+            <h5>Sign In</h5>
+            <input type="email" placeholder="Email address" id="email"> <br>
+            <input type="password" placeholder="Password" name="" id="pass">
+            <div class="forgot">
+            <p><input type="checkbox" name="" id="keep"><p> Keep me signed In</p> <button>?</button></p>
+            <p><u>Forgot your password?</u></p>
+        </div>
+        <button id="enter"> Sign In</button> <br>
+        <button id="create"> Create a new account</button>
+            <p id="or">or</p>
+        <a id="google" href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=%2Fprofile&redirect_uri=https%3A%2F%2Fwww.geekbuying.com%2FMain%2FSignIn&response_type=token&client_id=472714482096-o15au3vh80f5hontiepjt6jb2psi5enk.apps.googleusercontent.com&service=lso&o2v=1&flowName=GeneralOAuthFlow"><img src="https://img2.cgtrader.com/items/2590278/0572f24550/google-logo-v1-002-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg" alt=""></a>
+        </div>
+     </div>
+    </div>
+</body>
+</html>
