@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        #orders{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin: auto;
+    gap: 15px;
+    margin-top: 40px;
+}
+#orders >div {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(189, 212, 212);
+}
+#orders > div img{
+    width: 100%;
+}
+#orders > div h4{
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+}
+    </style>
+</head>
+<body>
+    <div id="orders"></div>
+</body>
+<script>
+    let orders = document.getElementById("orders")
+    let cart = JSON.parse(localStorage.getItem("order"))||[];
+ function Display(){
+    orders.innerHTML="";
+    cart.forEach((ele) => {
+        let card = document.createElement("div");
+        let image = document.createElement("img");
+        let des = document.createElement("p");
+        let price = document.createElement("h4");
+        let add = document.createElement("button");
+        image.setAttribute("src",ele.image);
+        des.innerText = ele.description;
+        price.innerText = "₹"+" "+ele.price;
+        card.append(image,des,price);
+        orders.append(card)
+    });
+ }
+ Display()
+</script>
+</html>

@@ -376,7 +376,7 @@ border-radius: 5px;
         </div>
     </div>
     </div>
-    <div class="pic">
+    <div onclick="onClick()" class="pic">
      <div class="img">
         <img src="https://img.gkbcdn.com/s3/bn/2301/740x670-63d7599d2b40c930200ab207.jpg" alt="">
      </div>
@@ -437,7 +437,7 @@ border-radius: 5px;
      </div>
     </div>
     <h4 class="trend">Trending Categories</h4>
-    <div id="box">
+    <div onclick="onClick()" id="box">
          <div>
             <img src="https://img.gkbcdn.com/s3/bn/2301/dyads11dog2-63c66dea2b40c939489cd456.gif" alt="">
             <h6>Smart Home & Garden</h6>
@@ -455,8 +455,8 @@ border-radius: 5px;
          </div>
     </div>
     <h4 class="trend">New For You</h4>
-    <div id="box2">
-   <div id="full-img">
+    <div onclick="onClick()" id="box2">
+   <div  id="full-img">
     <img src="https://img.gkbcdn.com/bn/2302/redmi276348-63f49aa02b40c95e941a2b0a._p1_.jpg" alt="">
    </div>
    <div>
@@ -476,7 +476,7 @@ border-radius: 5px;
    </div>
     </div>
     <h4 class="trend">Enjoy Life</h4>
-    <div class="enjoy">
+    <div onclick="onClick()" class="enjoy">
        <div class="big-pic">
         <img src="https://img.gkbcdn.com/bn/2209/500x632-63326e5e2b40c9222cacb303._p1_.jpg" alt="">
        </div>
@@ -534,7 +534,7 @@ border-radius: 5px;
        </div>
     </div>
     <h4 class="trend">Best Sellers</h4>
-    <div id="box3">
+    <div onclick="onClick()" id="box3">
    <div>
     <img src="https://img.gkbcdn.com/p/2021-04-12/4inch-32GB-Handheld-Portable-Game-Console-5000-Games-458415-1._w280_p1_.jpg" alt="">
     <p>32GB Handheld Game Console 5000+ Games 4inch Screen Double</p>
@@ -561,7 +561,7 @@ border-radius: 5px;
    </div>
     </div>
     <h4 class="trend">Popular Brands</h4>
-    <div id="box4">
+    <div onclick="onClick()" id="box4">
         <div class="slideshow">
         </div>
         <div class="brands">
@@ -600,7 +600,7 @@ border-radius: 5px;
         </div>
         </div>
     </div>
-    <div class="brands">
+    <div onclick="onClick()" class="brands">
         <div class="main-img">
             <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
         </div>
@@ -636,7 +636,7 @@ border-radius: 5px;
     </div>
     </div>
 </div>
-<div class="brands">
+<div onclick="onClick()" class="brands">
     <div class="main-img">
         <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
     </div>
@@ -672,7 +672,7 @@ border-radius: 5px;
 </div>
 </div>
 </div>
-<div class="brands">
+<div onclick="onClick()" class="brands">
     <div class="main-img">
         <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
     </div>
@@ -708,7 +708,7 @@ border-radius: 5px;
 </div>
 </div>
 </div>
-<div class="brands">
+<div onclick="onClick()" class="brands">
     <div class="main-img">
         <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
     </div>
@@ -745,4 +745,14 @@ border-radius: 5px;
 </div>
 </div>
 </body>
+<script>
+    function onClick(){
+        addEventListener("click",function(){
+            window.open("http://127.0.0.1:5500/cart.html");
+        })
+    }
+    let name = JSON.parse(localStorage.getItem("identity"))
+    let a = document.getElementById("Signin");
+    a.innerText = name;
+</script>
 </html>
