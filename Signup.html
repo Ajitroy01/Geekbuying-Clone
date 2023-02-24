@@ -45,6 +45,8 @@
             height: 40px;
             margin-bottom: 20px;
             border-radius: 5px;
+            border-width: 1px;
+            border-color: rgb(180, 168, 168);
         }
         #pass{
             width: 90%;
@@ -52,6 +54,8 @@
             height: 40px;
             margin-bottom: 20px;
             border-radius: 5px;
+            border-width: 1px;
+            border-color: rgb(180, 168, 168);
         }
         .forgot{
             display: flex;
@@ -110,18 +114,46 @@
      <div id="back">
         <div class="signin">
             <h5>Sign In</h5>
+            <form>
             <input type="email" placeholder="Email address" id="email"> <br>
             <input type="password" placeholder="Password" name="" id="pass">
             <div class="forgot">
             <p><input type="checkbox" name="" id="keep"><p> Keep me signed In</p> <button>?</button></p>
             <p><u>Forgot your password?</u></p>
         </div>
-        <button id="enter"> Sign In</button> <br>
-        <button id="create"> Create a new account</button>
+        <input type="submit" value="Sign In" id="enter">
+    </form>
+       <a href="./Register.html"><button id="create">Create a new account</button></a>
             <p id="or">or</p>
         <a id="google" href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&state=%2Fprofile&redirect_uri=https%3A%2F%2Fwww.geekbuying.com%2FMain%2FSignIn&response_type=token&client_id=472714482096-o15au3vh80f5hontiepjt6jb2psi5enk.apps.googleusercontent.com&service=lso&o2v=1&flowName=GeneralOAuthFlow"><img src="https://img2.cgtrader.com/items/2590278/0572f24550/google-logo-v1-002-3d-model-low-poly-max-obj-3ds-fbx-ma-stl.jpg" alt=""></a>
         </div>
      </div>
     </div>
 </body>
+<script>
+    let LSdata = JSON.parse(localStorage.getItem("account-data"));
+    let name = JSON.parse(localStorage.getItem("identity"));
+    if(name==null){
+        name =[];
+    }
+    let email = document.getElementById("email");
+    let password = document.getElementById("pass");
+    let form = document.querySelector("form");
+    form.addEventListener("submit",function(e){
+        e.preventDefault();
+        for(let i=0 ; i<LSdata.length ; i++){
+            if((LSdata[i].email === email.value) &&(LSdata[i].pass===password.value)){
+          alert("Sign In Successful !");
+          window.open("http://127.0.0.1:5500/homepage.html")
+           name.push(LSdata[i].name);
+          localStorage.setItem("identity",JSON.stringify(name))
+            }
+            else if((LSdata[i].email !== email.value) ||(LSdata[i].pass!==password.value)){
+                alert("Wrong Credentials");
+            }
+        }
+    })
+
+
+</script>
 </html>
