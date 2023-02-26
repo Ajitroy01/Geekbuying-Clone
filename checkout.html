@@ -271,13 +271,8 @@
             };
 
             let arr = JSON.parse(localStorage.getItem("data"))
-                // console.log(arr)
-
             arr.push(datas)
-
             localStorage.setItem("data", JSON.stringify(arr))
-
-            console.log("data:", Name, Address, Mobile)
             window.location.href = "shipping.html"
 
         }
