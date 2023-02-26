@@ -265,29 +265,23 @@
 
         ship.textContent = detail.Address
     })
-    let cart = JSON.parse(localStorage.getItem("cart"))
+    let cart = JSON.parse(localStorage.getItem("order"))
 
     let TOTAL = document.getElementById("TOTAL")
     let total = 0;
-    cart.forEach(function(product) {
-        let cart = JSON.parse(localStorage.getItem("cart"))
-
-        console.log((product.Price))
-        total = total + parseInt(product.Price);
+    cart.forEach((product) => {
+        total = total + parseInt(product.price);
         console.log(typeof(total))
         TOTAL.innerText = "₹" + total;
-
         TOTAL.style.fontWeight = "bold"
     })
-
     let TOTAL1 = document.getElementById("TOTAL1")
-
     let total1 = 0;
     cart.forEach(function(product) {
-        let cart = JSON.parse(localStorage.getItem("plumcart"))
+        let cart = JSON.parse(localStorage.getItem("order"))
 
         console.log((product.Price))
-        total1 = total1 + parseInt(product.Price);
+        total1 = total1 + parseInt(product.price);
         console.log(typeof(total1))
         TOTAL1.innerText = total1
         total1;
