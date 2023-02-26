@@ -1,54 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>Order Total</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <style>
-        #orders{
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    margin: auto;
-    gap: 15px;
-    margin-top: 40px;
-}
-#orders >div {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(189, 212, 212);
-}
-#orders > div img{
-    width: 100%;
-}
-#orders > div h4{
-    margin-left: 20px;
-    font-size: 20px;
-    margin-top: 40px;
-}
+        * {
+            font-family: serifabold !important;
+        }
+
+        .mainlogo {
+            width: 100%;
+            background-color: rgb(83, 113, 255);
+        }
+
+        .mainlogo>img {
+            margin-left: 26rem;
+        }
+
+        #PRODUCTS {
+            border: 1px solid #d1cccc;
+            width: 60%;
+            height: fit-content;
+            display: inline-block;
+            margin-left: 18rem;
+        }
+
+        #PRODUCTS>div {
+            padding: 50px;
+        }
+
+        #PRODUCTS>div>img {
+            width: 250px;
+            display: inline-block;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+
+
+        #PRODUCTS>div>p:nth-of-type(1) {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 30px;
+            margin-left: 8rem;
+        }
+
+        #PRODUCTS>div>p:nth-of-type(2) {
+            display: inline-block;
+            vertical-align: top;
+            font-size: 30px;
+            font-weight: bold;
+            float: right;
+        }
+
+        .total {
+            display: inline-block;
+            border: 1px solid #d1cccc;
+            width: 40%;
+            height: 400px;
+            vertical-align: top;
+            text-align: center;
+            margin-top: 40px;
+            margin-left: 30%;
+        }
+
+        #TOTAL {
+            /* background-color: yellow; */
+            font-size: 30px;
+        }
+
+        span {
+            font-size: 27px;
+        }
+
+        .proceed {
+            padding: 20px 15px 22px;
+            width: 80%;
+            background: #5e0c8c;
+            /* max-width: 100%; */
+            color: #fff;
+            border-radius: 50px;
+            line-height: 24px;
+            font-weight: 700;
+            font-size: 22px;
+            border: 1px solid #5e0c8c;
+            border-radius: 5px;
+            margin: 0px auto;
+        }
+
+        .congratulations {
+            color: #5e0c8c;
+            border: 1px solid;
+            padding: 20px;
+            margin: 15px;
+            width: 60%;
+            font-weight: bold;
+            margin: 50px auto;
+            font-size: 22px;
+        }
+
+        .emi {
+            margin: 35px;
+        }
+
+        .total>p {
+            display: inline-block;
+        }
+
+        #CHAR {
+            margin-right: 261px;
+            font-size: 30px;
+        }
+
+        .proceed:hover {
+            background-color: #9b3ad3;
+        }
+
+        .welcomecart {
+            color: rgb(65, 65, 113);
+            font-size: 55px;
+            margin-left: 40rem;
+        }
+
+        .rev {
+            width: 110px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: rgb(227, 49, 49);
+            color: white;
+            border: none;
+            margin-left: 4rem;
+        }
+        .btndiv{
+            margin-top: 20px;
+        }
     </style>
 </head>
+
 <body>
-    <div id="orders"></div>
+    <header>
+        <div href="./index.html" class="navbar">
+            <div class="mainlogo"><img src="./Screenshot (89).png" alt="logo">
+                <div class="line"></div>
+            </div>
+        </div>
+    </header>
+    <h1 class="welcomecart">My Cart</h1>
+    <div id="PRODUCTS">
+
+    </div>
+    <div class="total">
+        <h2>Order Summary</h2>
+        <hr>
+        <p id="CHAR">Total</p>
+        <span>&#8377;</span>
+        <p id="TOTAL"></p>
+        <hr>
+
+        <div onclick="checkout()" class="proceed">Proceed To Checkout</div>
+
+        <div class="congratulations">Congratulations! You've got FREE shipping</div>
+
+    </div>
 </body>
-<script>
-    let orders = document.getElementById("orders")
-    let cart = JSON.parse(localStorage.getItem("order"))||[];
- function Display(){
-    orders.innerHTML="";
-    cart.forEach((ele) => {
-        let card = document.createElement("div");
-        let image = document.createElement("img");
-        let des = document.createElement("p");
-        let price = document.createElement("h4");
-        let add = document.createElement("button");
-        image.setAttribute("src",ele.image);
-        des.innerText = ele.description;
-        price.innerText = "₹"+" "+ele.price;
-        card.append(image,des,price);
-        orders.append(card)
-    });
- }
- Display()
-</script>
+
 </html>
+<script>
+    let cart = JSON.parse(localStorage.getItem("order"))
+    let parent = document.getElementById("PRODUCTS")
+    function showProducts() {
+        parent.innerHTML = "";
+        cart.forEach(function (product) {
+
+            let div = document.createElement("div");
+
+            var img = document.createElement("img");
+
+            img.src = product.image;
+            // console.log(img.src)
+            let product_price = document.createElement("p")
+
+
+            product_price.textContent = "₹ " + product.price;
+
+            let product_name = document.createElement("p")
+
+            product_name.textContent = product.name;
+
+            let hr = document.createElement("hr")
+            let Quantity = document.createElement("span");
+            let Remove = document.createElement("button");
+            Remove.className = "rev";
+            Remove.textContent = "Remove"
+            let btndiv = document.createElement("div");
+            btndiv.className= "btndiv";
+            Quantity.textContent = product.quantity;
+            Remove.addEventListener("click", () => {
+                cart = cart.filter((ele) => {
+                    return ele.price !== product.price
+                })
+                localStorage.setItem("order", JSON.stringify(cart))
+                showProducts()
+            });
+            let sum = 0;
+            for (let i = 0; i < cart.length; i++) {
+                sum += cart[i].Price * cart[i].quantity;
+            }
+            btndiv.append(Remove)
+            div.append(img, product_name, product_price,btndiv,hr)
+            // console.log(div)
+
+            parent.append(div);
+        });
+    }
+
+    showProducts();
+
+    let TOTAL = document.getElementById("TOTAL")
+
+    let total = 0;
+    cart.forEach(function (product) {
+        let cart = JSON.parse(localStorage.getItem("order"))
+        total += parseInt(product.price);
+        TOTAL.innerText = total;
+        TOTAL.style.fontWeight = "bold"
+
+    })
+    function checkout(){
+        window.location.href = "checkout.html";
+    }
+</script>

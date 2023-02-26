@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/aa64b81c87.js" crossorigin="anonymous"></script>
+    <title>Pay</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            margin-left: 15%;
+        }
+        .contactbox {
+            border: 1px solid #cbc8c8;
+            width: 490px;
+            height: fit-content;
+            font-size: 22px;
+        }
+        
+        .input {
+            width: 250px;
+            margin-top: 2%;
+            border: none
+        }
+        
+        .shipmethod {
+            margin-top: 2%;
+        }
+        
+        .continuebt {
+            display: flex;
+        }
+        
+        #follow-btn {
+            width: 200px;
+            height: 55px;
+            background-color: rgb(77, 77, 231);
+            outline: none;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 19px;
+            margin-top: 2%;
+            margin-left: 30%;
+        }
+        .bottom {
+            border-top: 2px solid rgb(99, 44, 44);
+            margin-top: 20%;
+            margin-left: 2%;
+            margin-right: 3%;
+        }
+        
+        .policy:hover {
+            color: #5b0c8b;
+        }
+        
+        .subcontainer2 {
+            background-color: #EEEEEE;
+            margin-left: 10%;
+            width: 600px;
+        }
+        
+        .sideleft {
+            margin-left: 8%;
+        }
+        
+        .form .label {
+            display: block;
+            color: #555555;
+            margin-bottom: 6px;
+            font-size: 24px;
+        }
+        
+        .form .input1 {
+            padding: 13px 0 13px 25px;
+            width: 80%;
+            text-align: center;
+            border: 2px solid #dddddd;
+            letter-spacing: 1px;
+            word-wrap: 3px;
+            outline: none;
+            font-size: 16px;
+            color: #555555;
+        }
+        
+        .card-grp {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .card-item {
+            width: 45%;
+        }
+        
+        .space {
+            margin-bottom: 20px;
+        }
+        
+        .icon-relative {
+            position: relative;
+        }
+        
+        .icon-relative .fas,
+        .icon-relative .fab,
+        .icon-relative .far {
+            position: absolute;
+            bottom: 12px;
+            left: 15px;
+            font-size: 20px;
+            color: #555555;
+        }
+        
+        .btn {
+            margin-top: 38px;
+            background-color: rgb(44, 177, 177);
+            ;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+        
+        .h4 {
+            font-size: 16px;
+        }
+        
+        #plumcontact {
+            display: inline-block;
+            color: skyblue;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        
+        #plumshipto {
+            display: inline-block;
+            color: rgb(43, 203, 214);
+            font-size: 100%;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background-color: rgb(162, 162, 221);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="subcontainer1">
+            <div>
+                <h3>Payment</h3>
+                <p>All transaction are secure and encrypted</p>
+            </div>
+            <div class="fullbody">
+                <div class="form">
+                    <div class="card space icon-relative">
+                        <label class="label">Card holder:</label>
+                        <input id="card_holder" type="text" class="input1" name="card_holder" placeholder="Enter name">
+                        <i class="fas fa-user"></i>
+
+                    </div>
+                    <div class="card space icon-relative">
+                        <label class="label">Card number:</label>
+                        <input id="card_number" type="text" class="input1" name="card_number" placeholder="Enter card number">
+                        <i class="fab fa-cc-visa"></i>
+
+                    </div>
+                    <div class="card-grp space icon-relative">
+                        <div class="card-item">
+
+                            <label class="label">Expiry date:</label>
+                            <input id="expiry_date" type="text" class="input1" name="expiry_date" placeholder="00 / 00">
+                            <i class="far fa-calendar-alt"></i>
+
+                        </div>
+                        <div class="card-item icon-relative">
+
+                            <label class="label">CVV:</label>
+                            <input id="cvv" type="text" class="input1" name="cvc" placeholder="000">
+                            <i class="fas fa-lock"></i>
+
+                        </div>
+                    </div>
+                    <div onclick="nextpage()" class="btn">
+                        PAY HERE
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>
+<script>
+    function nextpage() {
+        window.location.href = "finish.html";
+    }
+
+    let details = JSON.parse(localStorage.getItem("data"))
+
+    let contact = document.getElementById("contact")
+    let ship = document.getElementById("shipto")
+
+
+    details.forEach(function(detail) {
+       
+        contact.textContent = detail.Mobile
+
+        ship.textContent = detail.Address
+
+    })
+</script>
+
