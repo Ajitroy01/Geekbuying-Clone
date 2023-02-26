@@ -103,6 +103,7 @@ color: black;
 }
 #product > div img{
     width: 100%;
+    height: 200px;
 }
 #product > div h4{
     margin-left: 20px;
@@ -111,6 +112,7 @@ color: black;
 }
 #product > div button{
     margin-left: 35%;
+    height: 20px;
     margin-bottom: 20px;
     border: none;
     border-radius: 10px;
@@ -141,7 +143,6 @@ color: black;
             <select name="" id="ship">
                 <option value="">Ship to / INR</option>
             </select>
-            <a id="Signin" href="./Signup.html" target="_blank"><i class="fa-regular fa-user"></i> Sign in</a>
             <a id="cart" href="./order.html">
                 <i class="fa-solid fa-cart-shopping"></i>
             </a>
@@ -171,9 +172,9 @@ color: black;
 <script>
  async function fetchdata(){
     try{
-        let data = await fetch("https://63f859315b0e4a127de3f9fd.mockapi.io/Products");
+        let data = await fetch("product.json");
         data = await data.json()
-        filterby(data)
+        filterby(data.Products)
     }
     catch(err){
         console.log(err)
@@ -191,8 +192,7 @@ function filterby(data){
     }
     else{
         data = data.filter((ele)=>{
-            console.log(ele.Category)
-            return ele.Category==filter.value;
+            return ele.cat==filter.value;
         })
         Display(data);
     }
@@ -203,21 +203,23 @@ function filterby(data){
     data.forEach((ele) => {
         let card = document.createElement("div");
         let image = document.createElement("img");
-        let des = document.createElement("p");
+        let name = document.createElement("h2");
         let price = document.createElement("h4");
         let add = document.createElement("button");
         add.innerText = "Add to Cart";
         image.setAttribute("src",ele.image);
-        des.innerText = ele.description;
-        price.innerText = "₹"+" "+ele.price;
+        name.innerText =  ele.name;
+        price.innerText = "₹"+ ele.price;
         add.addEventListener("click",function(){
             cart.push(ele)
-            localStorage.setItem("order",JSON.stringify(cart));
+            alert("Product Added")
+            localStorage.setItem("order",JSON.stringify(cart));  
+            
         })
-        card.append(image,des,price,add);
+        card.append(image,name,price,add);
         product.append(card)
     });
  }
- 
+
 </script>
 </html>

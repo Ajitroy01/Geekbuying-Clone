@@ -144,8 +144,8 @@
         for(let i=0 ; i<LSdata.length ; i++){
             if((LSdata[i].email === email.value) &&(LSdata[i].pass===password.value)){
           alert("Sign In Successful !");
-          window.open("http://127.0.0.1:5500/homepage.html")
-           name.push(LSdata[i].name);
+          window.open("http://127.0.0.1:5500/index.html")
+           name.push(LSdata[LSdata.length-1].name);
           localStorage.setItem("identity",JSON.stringify(name))
             }
             else if((LSdata[i].email !== email.value) ||(LSdata[i].pass!==password.value)){
@@ -153,7 +153,7 @@
             }
         }
     })
-
+  
 
 </script>
 </html>

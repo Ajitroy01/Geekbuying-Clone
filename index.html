@@ -8,18 +8,18 @@
     <script src="https://kit.fontawesome.com/ac031c6da1.js" crossorigin="anonymous"></script>
     <style>
         #main{
-            background-color:rgb(83, 113, 255) ;
+        background-color:  rgb(83, 113, 255);
         }
         .uppernav{
     width: 100%;
     height: 30px;
     display: flex;
     justify-content: end;
-    background-color:rgb(83, 113, 255) ;
+    background-color:  rgb(83, 113, 255);
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.902);
 }
 .select{
-    background-color:rgb(83, 113, 255) ;
+    background-color:  rgb(83, 113, 255);
     border: none;
     color: white;
     margin-right: 10%;
@@ -35,12 +35,13 @@
     justify-content: space-between;
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color:rgb(83, 113, 255) ;
+    background-color:  rgb(83, 113, 255);
     margin: auto;
 }
 .nav img {
     width: 20%;
     height: 60px;
+    background-color:  rgb(83, 113, 255);
 }
 #search{
     width: 40%;
@@ -51,7 +52,7 @@
 #ship{
 height: 30px;
 margin-top: 10px;
-background-color:rgb(83, 113, 255) ;
+background-color:  rgb(83, 113, 255);
 color: white;
 border: none;
 }
@@ -77,12 +78,12 @@ border: none;
 }
 .low-nav button{
     border: none;
-    background-color:rgb(83, 113, 255) ;
+    background-color:  rgb(83, 113, 255);
     color: white;
 }
 .low-nav select{
     border: none;
-    background-color:rgb(83, 113, 255) ;
+    background-color:  rgb(83, 113, 255);
     color: white;
 }
 .low-nav select option{
@@ -299,6 +300,10 @@ border-radius: 5px;
     width: 70% ;
     display: flex;
     border-radius: 5px;
+    justify-content: space-around;
+}
+.main-brands > div{
+    width: 20%;
 }
 .main-brands > div button{
     width: 80px;
@@ -327,6 +332,57 @@ border-radius: 5px;
     color: gray;
     margin-left: 10px;
     margin-bottom: -60px;
+}
+#footer{
+    background-color: #f1f6fd;
+    margin-top: 60px;
+
+}
+#footer p{
+    color: rgb(80, 76, 76);
+}
+.upperfoot{
+    padding-top: 40px;
+    border-top: 1px solid #cad8ea;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: auto;
+}
+.qr{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.qrimg{
+    width: 10%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.qrimg > div {
+    border-radius: 5px;
+}
+.qrimg > div img{
+    border-radius: 5px;
+}
+.qrimg > div:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+.social{
+width: 50%;
+margin-top: -15px;
+}
+.social > img{
+    width: 100%;
+}
+.lowfoot > h4{
+    margin-left: 10%;
+}
+.lowfoot > img{
+    width: 100%;
 }
     </style>
 </head>
@@ -390,19 +446,19 @@ border-radius: 5px;
             <p>₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <h6>₹2213.81</h6>
             <p>₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2017-10-21/c120-6-axis-gyro-2-4g-mini-air-mouse-1571989094158._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <h6>₹2213.81</h6>
             <p>₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2022-06-28/OOLACTIVE-GF-1202-34oz-Motivational-Water-Bottle-with-Straw-507108-0._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <h6>₹2213.81</h6>
             <p>₹2554.53</p>
@@ -410,7 +466,13 @@ border-radius: 5px;
         </div>
         <div class="product">
         <div>
-            <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2018-10-25/xiaomi-aqara-smart-window-door-sensor-white-1574132921215._w280_p1_.jpg" alt="">
+            <button>13% OFF</button>
+            <h6>₹2213.81</h6>
+            <p>₹2554.53</p>
+        </div>
+        <div>
+            <img src="https://img.gkbcdn.com/p/2019-05-16/ipega-9087s-gamepad-controller-black-1571983935880._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <h6>₹2213.81</h6>
             <p>₹2554.53</p>
@@ -422,13 +484,7 @@ border-radius: 5px;
             <p>₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
-            <button>13% OFF</button>
-            <h6>₹2213.81</h6>
-            <p>₹2554.53</p>
-        </div>
-        <div>
-            <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2021-07-07/Tronsmart-T6-Pro-45W-Bluetooth-5-0-Speaker-with-LED-Light-461146-0._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <h6>₹2213.81</h6>
             <p>₹2554.53</p>
@@ -444,12 +500,12 @@ border-radius: 5px;
             <p>Smart cleaning robots and vacuums, living room furniture, patio and garden supplies, up to 60% off!</p>
          </div>
          <div>
-            <img src="https://img.gkbcdn.com/s3/bn/2301/dyads11dog2-63c66dea2b40c939489cd456.gif" alt="">
+            <img src="https://img.gkbcdn.com/bn/2205/3d488x274-62958bbe2b40c9241c538d77._p1_.jpg" alt="">
             <h6>Smart Home & Garden</h6>
             <p>Smart cleaning robots and vacuums, living room furniture, patio and garden supplies, up to 60% off!</p>
          </div>
          <div>
-            <img src="https://img.gkbcdn.com/s3/bn/2301/dyads11dog2-63c66dea2b40c939489cd456.gif" alt="">
+            <img src="https://img.gkbcdn.com/bn/2212/488x274-63998a412b40c92ac0082d77._p1_.jpg" alt="">
             <h6>Smart Home & Garden</h6>
             <p>Smart cleaning robots and vacuums, living room furniture, patio and garden supplies, up to 60% off!</p>
          </div>
@@ -465,12 +521,12 @@ border-radius: 5px;
 <h6>₹12776.06</h6>
    </div>
    <div>
-    <img src="https://img.gkbcdn.com/p/2023-02-03/Teclast-P40HD-10-1---Tablet-Unisoc-T606-A75-CPU-4GB-RAM-64GB-ROM-519247-0._w280_p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/p/2023-02-08/Electric-Air-Duster-Upgraded-Air-Duster-and-Vacuum-Orange-519306-0._w280_p1_.jpg" alt="">
 <p>Teclast P40HD 10.1" Tablet Unisoc T606 A75 8-core CPU 4GB RAM 64GB</p>
 <h6>₹12776.06</h6>
    </div>
    <div>
-    <img src="https://img.gkbcdn.com/p/2023-02-03/Teclast-P40HD-10-1---Tablet-Unisoc-T606-A75-CPU-4GB-RAM-64GB-ROM-519247-0._w280_p1_.jpg" alt="">
+   <img src="https://img.gkbcdn.com/p/2023-02-21/ILIFE-V7s-Plus-Robot-Vacuum-Cleaner-519521-0._w280_p1_.jpg" alt="">
 <p>Teclast P40HD 10.1" Tablet Unisoc T606 A75 8-core CPU 4GB RAM 64GB</p>
 <h6>₹12776.06</h6>
    </div>
@@ -497,11 +553,11 @@ border-radius: 5px;
         <h6>Experience the fun of digital fabrication</h6>
         <div class="fun">
 <div>
-    <img src="https://img.gkbcdn.com/bn/2301/2-63b3a2462b40c937987e3859._p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/bn/2301/4-63b3a3032b40c937987e385b._p1_.jpg" alt="">
     <p>3D printers</p>
 </div>
 <div>
-    <img src="https://img.gkbcdn.com/bn/2301/3-63b3a2aa2b40c937987e385a._p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/bn/2301/5-63b3a3262b40c937987e385c._p1_.jpg" alt="">
     <p>Laser engravers</p>
 </div>
         </div>
@@ -510,11 +566,11 @@ border-radius: 5px;
         <h6>Experience the fun of digital fabrication</h6>
         <div class="fun">
 <div>
-    <img src="https://img.gkbcdn.com/bn/2301/2-63b3a2462b40c937987e3859._p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/bn/2301/6-63b3a3642b40c937987e385d._p1_.jpg" alt="">
     <p>3D printers</p>
 </div>
 <div>
-    <img src="https://img.gkbcdn.com/bn/2301/3-63b3a2aa2b40c937987e385a._p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/bn/2301/7-63b3a37c2b40c937987e385f._p1_.jpg" alt="">
     <p>Laser engravers</p>
 </div>
         </div>
@@ -523,11 +579,11 @@ border-radius: 5px;
         <h6>Experience the fun of digital fabrication</h6>
         <div class="fun">
 <div>
-    <img src="https://img.gkbcdn.com/bn/2301/2-63b3a2462b40c937987e3859._p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/bn/2301/9-63b3a43b2b40c937987e3864._p1_.jpg" alt="">
     <p>3D printers</p>
 </div>
 <div>
-    <img src="https://img.gkbcdn.com/bn/2301/3-63b3a2aa2b40c937987e385a._p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/bn/2301/8-63b3a4012b40c937987e3861._p1_.jpg" alt="">
     <p>Laser engravers</p>
 </div>
         </div>
@@ -542,19 +598,19 @@ border-radius: 5px;
     <h6>₹6813.50</h6>
    </div>
    <div>
-    <img src="https://img.gkbcdn.com/p/2021-04-12/4inch-32GB-Handheld-Portable-Game-Console-5000-Games-458415-1._w280_p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/p/2019-05-16/ipega-9087s-gamepad-controller-black-1571983935880._w280_p1_.jpg" alt="">
     <p>32GB Handheld Game Console 5000+ Games 4inch Screen Double</p>
     <img class="rating" src="https://th.bing.com/th/id/R.2002076951da1ee416e4c505b64b33e5?rik=TZ2%2f9g0fLHsesg&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f104-1043568_5-star-rating-png.png&ehk=YOQJ5d%2bFlIE%2bQSstHBdgNgOm3Xoqa3JuZLj0VNvpjrI%3d&risl=&pid=ImgRaw&r=0" alt="">
     <h6>₹6813.50</h6>
    </div>
    <div>
-    <img src="https://img.gkbcdn.com/p/2021-04-12/4inch-32GB-Handheld-Portable-Game-Console-5000-Games-458415-1._w280_p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/p/2018-02-07/jvmac-jm-p5-magnetic-wristband-1571977987322._w280_p1_.jpg" alt="">
     <p>32GB Handheld Game Console 5000+ Games 4inch Screen Double</p>
     <img class="rating" src="https://th.bing.com/th/id/R.2002076951da1ee416e4c505b64b33e5?rik=TZ2%2f9g0fLHsesg&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f104-1043568_5-star-rating-png.png&ehk=YOQJ5d%2bFlIE%2bQSstHBdgNgOm3Xoqa3JuZLj0VNvpjrI%3d&risl=&pid=ImgRaw&r=0" alt="">
     <h6>₹6813.50</h6>
    </div>
    <div>
-    <img src="https://img.gkbcdn.com/p/2021-04-12/4inch-32GB-Handheld-Portable-Game-Console-5000-Games-458415-1._w280_p1_.jpg" alt="">
+    <img src="https://img.gkbcdn.com/p/2019-09-27/tronsmart-element-t6-mini-bluetooth-5-0-speaker---black-1571994046957._w280_p1_.jpg" alt="">
     <p>32GB Handheld Game Console 5000+ Games 4inch Screen Double</p>
     <img class="rating" src="https://th.bing.com/th/id/R.2002076951da1ee416e4c505b64b33e5?rik=TZ2%2f9g0fLHsesg&riu=http%3a%2f%2fclipart-library.com%2fnew_gallery%2f104-1043568_5-star-rating-png.png&ehk=YOQJ5d%2bFlIE%2bQSstHBdgNgOm3Xoqa3JuZLj0VNvpjrI%3d&risl=&pid=ImgRaw&r=0" alt="">
     <h6>₹6813.50</h6>
@@ -577,21 +633,21 @@ border-radius: 5px;
                 <p class="price">₹2554.53</p>
             </div>
             <div>
-                <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+               <img src="https://img.gkbcdn.com/p/2022-08-31/kaiweets-digital-multimeter-trms-6000-counts---c72b4d-1661925787017._w280_p1_.jpg" alt="">
                 <button>13% OFF</button>
                 <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
                 <h6>₹2213.81</h6>
                 <p class="price">₹2554.53</p>
             </div>
             <div>
-                <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+                <img src="https://img.gkbcdn.com/p/2021-10-18/KAIWEETS-KM601-Digital-Multimeter-474552-0._w280_p1_.jpg" alt="">
                 <button>13% OFF</button>
                 <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
                 <h6>₹2213.81</h6>
                 <p class="price">₹2554.53</p>
             </div>
             <div>
-                <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+                <img src="https://img.gkbcdn.com/p/2021-10-18/KAIWEETS-KET01-Multimeter-Test-Leads-Kit-474544-0._w280_p1_.jpg" alt="">
                 <button>13% OFF</button>
                 <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
                 <h6>₹2213.81</h6>
@@ -602,32 +658,32 @@ border-radius: 5px;
     </div>
     <div onclick="onClick()" class="brands">
         <div class="main-img">
-            <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/bb/ilife-20221228174012123._p1_.jpg" alt="">
         </div>
          <div class="main-brands">
         <div>
-            <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2022-12-02/ILIFE-W400-Floor-Washing-Robot-EU-Plug-518502-0._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
             <h6>₹2213.81</h6>
             <p class="price">₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+           <img src="https://img.gkbcdn.com/p/2022-06-15/ILIFE-B5-Max-Robot-Vacuum-Cleaner-504827-0._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
             <h6>₹2213.81</h6>
             <p class="price">₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+           <img src="https://img.gkbcdn.com/p/2022-06-14/EASINE-by-ILIFE-G80-Cordless-Stick-Vacuum-Cleaner-502887-0._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
             <h6>₹2213.81</h6>
             <p class="price">₹2554.53</p>
         </div>
         <div>
-            <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+            <img src="https://img.gkbcdn.com/p/2022-06-15/ILIFE-W455-Floor-Washing-Robot-504829-0._w280_p1_.jpg" alt="">
             <button>13% OFF</button>
             <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
             <h6>₹2213.81</h6>
@@ -638,32 +694,32 @@ border-radius: 5px;
 </div>
 <div onclick="onClick()" class="brands">
     <div class="main-img">
-        <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/bb/tronsmart-20221007152616686._p1_.jpg" alt="">
     </div>
      <div class="main-brands">
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-08-31/tronsmart-bang-mini-wireless-speaker-a72b63-1661942906103._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-05-30/tronsmart-element-groove-bluetooth-speaker-black-bbd0c8-1653893706349._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+       <img src="https://img.gkbcdn.com/p/2022-02-25/Tronsmart-Force-Max-Outdoor-Speaker-497187-1._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-06-28/Tronsmart--T7-507089-0._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
@@ -674,32 +730,32 @@ border-radius: 5px;
 </div>
 <div onclick="onClick()" class="brands">
     <div class="main-img">
-        <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/bb/sculpfun-20221007152503762._p1_.jpg" alt="">
     </div>
      <div class="main-brands">
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+       <img src="https://img.gkbcdn.com/p/2021-12-22/SCULPFUN-S9-Laser-Engraver-481991-0._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-12-24/sculpfun-s30-pro-10w-laser-engraver-cutter-7a31b2-1671852910598._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+       <img src="https://img.gkbcdn.com/p/2022-12-24/sculpfun-s30-pro-max-20w-laser-engraver-cutter-958862-1671852745852._w280_.JPG" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-05-12/Sculpfun-S10-Laser-Engraver-500429-0._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
@@ -710,32 +766,32 @@ border-radius: 5px;
 </div>
 <div onclick="onClick()" class="brands">
     <div class="main-img">
-        <img src="https://img.gkbcdn.com/bb/kaiweets-20221007152715167._p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/bb/creality-20221007150037712._p1_.jpg" alt="">
     </div>
      <div class="main-brands">
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+       <img src="https://img.gkbcdn.com/p/2022-03-02/creality-ender-3-s1-pro-3d-printer-c9e30b-1646215071933._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-07-09/creality-ender-3-v2-3d-printer-with-upgraded-32-bit-silent-motherboard-732f54-1657351329700._w280_.JPG" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-07-06/Creality-Ender-3-Max-Neo-3D-Printer-507593-0._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
         <p class="price">₹2554.53</p>
     </div>
     <div>
-        <img src="https://img.gkbcdn.com/p/2021-10-21/KAIWEETS-HT206D-Digital-Clamp-Meter-475003-0._w280_p1_.jpg" alt="">
+        <img src="https://img.gkbcdn.com/p/2022-10-31/creality-ender-3-s1-3d-printer-303cda-1667202443810._w280_p1_.jpg" alt="">
         <button>13% OFF</button>
         <p>ILIFE V8 Plus Robot Vacuum Cleaner 1000Pa</p>
         <h6>₹2213.81</h6>
@@ -743,6 +799,66 @@ border-radius: 5px;
     </div>
 </div>
 </div>
+</div>
+<div id="footer">
+    <div class="upperfoot">
+          <div>
+        <h4>Help</h4>
+        <p>Order status</p>
+        <p>About us</p>
+        <p>Contact us</p>
+        <p>Warranty</p>
+        <p>FAQs</p>
+        <p>Sitemap</p>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <p>WhatGeek</p>
+            <p>Shipping guide</p>
+           <p>Payment information</p>
+           <p>Wholesale</p>
+           <p>Drop Shipping</p>
+           <p>Blog</p>
+           <p>Affiliates</p>
+          </div>
+          <div>
+            <h4>Policies</h4>
+            <p>Terms & conditions</p>
+<p>Return policy</p>
+<p>Privacy</p>
+<p>Declaration</p>
+<p>Customs</p>
+          </div>
+          <div class="qr">
+            <h4>Download The App</h4>
+            <div class="qrimg">
+                <div>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png" alt="">
+                </div>
+                <div>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" alt="">
+            </div>
+            <div>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" alt="">
+            </div>
+            <div>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" alt="">
+            </div>
+            </div>
+            <h4>Connect with us</h4>
+            <div class="social">
+            <img src="./Screenshot (91).png" alt="">
+            </div>
+          </div>
+          <div>
+            <p><i style="color:#06f;" class="fa-sharp fa-solid fa-envelope"></i>  service@geekbuying.com</p>
+            <p><i style="color:#06f;" class="fa-sharp fa-solid fa-ticket"></i>  Ticket</p>
+            <p><i style="color:#06f;" class="fa-solid fa-headset"></i>  Live Chat</p>
+          </div>
+    </div>
+    <div class="lowfoot">
+        <h4>Popular Searches</h4>
+        <img src="./Screenshot (92).png" alt=""></div>
 </div>
 </body>
 <script>
@@ -753,6 +869,8 @@ border-radius: 5px;
     }
     let name = JSON.parse(localStorage.getItem("identity"))
     let a = document.getElementById("Signin");
-    a.innerText = name;
+    for(let i=0 ; i<name.length ; i++){
+    a.innerText = name[name.length-1] ;
+    }
 </script>
 </html>
