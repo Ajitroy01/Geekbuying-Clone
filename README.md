@@ -1,6 +1,6 @@
 # far-bait-8578
 <h3>INTRODUCTION</h3>
-This project is a clone of an Indian E-Commerce website called Geekbuying.com. Geekbuying is an  E-commerce portal that sells smart home & outdoor gadgets like vaccum cleaner, fitness equipments, furnitures, e-bikes, scooters, etc.
+This project is a clone of an E-Commerce website called Geekbuying.com. Geekbuying is an  E-commerce portal that sells smart home & outdoor gadgets like vaccum cleaner, fitness equipments, furnitures, e-bikes, scooters, etc.
   
   
   It was a solo project it took 5 days to complete the project, I have created a basic flow for the Front End of the website.
