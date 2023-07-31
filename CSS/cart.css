@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.cart-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.details{
+    max-width: 1160px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.p-div{
+    width: 50%;
+    margin-left: 310px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-div{
+    width: 150px;
+}
+.cart-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.item-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.item-quantity label {
+    margin-right: 5px;
+}
+
+.item-quantity input {
+    width: 40px;
+    padding: 5px;
+    text-align: center;
+}
+
+.item-total {
+    font-weight: bold;
+}
+
+.remove-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF4500;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cart-total {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cart-total h2 {
+    font-size: 24px;
+    margin-left: 40px;
+}
+
+.checkout-btn {
+    margin-right: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008000;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Your existing CSS styles for other elements */
+
+/* Styling for the quantity display */
+.quantity-display {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 0 8px;
+  }
+  
+  /* Styling for the quantity buttons */
+  .quantity-btn {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .quantity-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .quantity-btn:active {
+    background-color: #003b80;
+  }
+  
