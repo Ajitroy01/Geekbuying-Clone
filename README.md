@@ -1,4 +1,4 @@
-# far-bait-8578
+# Geekbuying Clone
 <h3>INTRODUCTION</h3>
 This project is a clone of an E-Commerce website called Geekbuying.com. Geekbuying is an  E-commerce portal that sells smart home & outdoor gadgets like vaccum cleaner, fitness equipments, furnitures, e-bikes, scooters, etc.
   
